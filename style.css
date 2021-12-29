@@ -377,51 +377,86 @@ section .button a:hover{
   display : flex;
   flex-direction: row;
 }
+#contform form{
+  margin: 20px 0;
+  /* text-align: center; */
+  border-radius: 12px;
+  /* padding: 10px 20px; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  /* cursor: default; */
+  /* transition: all 0.4s ease; */
+
+}
 
 #form_submit_btn{
   outline: none;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 25px;
+  width : 100%;
   font-weight: 400;
   background: #4070f4;
+  letter-spacing:3px;
   color: #fff;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.4s ease;
 }
-form h1{
+form span{
   letter-spacing:3px;
   font-size:30px;
+  position: relative;
+  display: flex;
+  justify-content:center;
+  font-weight:bold;
 }
 form hr{
   margin-bottom: 20px;
 }
-form input,textarea {
-    margin: 10px 20px;
-    
-    border:2px solid #2B2B2B;
+form input{
+    margin: 10px 10px;
+    border:3px solid #4070f4;
     border-radius: 50px;
     font-size: 25px;
-    width: 100%;
+    width:auto;
 }
 form textarea {
-  margin: 10px 20px;
-    
-    border:2px solid #2B2B2B;
+    margin: 10px 10px;
+    border:3px solid #4070f4;
     border-radius: 20px;
     font-size: 20px;
-    width: 100%;
+    width: auto;
 }
 form label{
   letter-spacing: 3px;
   font-size: 20px;
 
 }
+form i{
+  color: #4070f4;
+}
 #form_submit_btn:hover{
   border-color: #4070f4;
   background-color: #fff;
   color: #4070f4;
+}
+
+#contform span::before,
+#contform span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+#contform span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Footer CSS */
@@ -458,6 +493,41 @@ footer .text span a:hover{
 }
 
 
+@media(max-width:700px){
+  .form{
+    display : flex;
+  flex-direction: column;
+  }
+  #contform{
+    width : 100%;
+    margin-top:50px;
+  }
+  #contform form{
+    width:100%;
+    margin: 0px;
+    padding: 20px;
+  }
+  #contform h1{
+    font-size:25px;
+    text-align: center;
+  }
+  form label{
+    font-size:16px;
+  }
+  #contform input{
+    width:90%;
+    border-width: 2px;
+  }
+  #contform textarea{
+    width:90%;
+    border-width: 2px;
+  }
+  #form_submit_btn{
+    font-size:20px;
+    letter-spacing:3px;
+  }
+
+}
 
 /* Responsive Media Query */
 @media (max-width: 1190px) {
