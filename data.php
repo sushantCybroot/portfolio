@@ -23,5 +23,8 @@
     else{
         echo "Not recored";
     }
+    $conn->close();
+    header("Location:https://master.d32d2ak623r2nj.amplifyapp.com");
+    exit();
 
 ?>
