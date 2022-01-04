@@ -10,10 +10,10 @@
         die("Connection error".$conn->connect_error);
     }
 
-    $name = $POST['name'];
-    $email = $POST['email'];
-    $phone_no = $POST['phone_no'];
-    $message = $POST['message'];
+    $name = $GET['name'];
+    $email = $GET['email'];
+    $phone_no = $GET['phone_no'];
+    $message = $GET['message'];
 
     $sql_query = "INSERT INTO portfolio(name,email,phone_no,message) VALUES ($name,$email,$phone_no,$message)";
 
